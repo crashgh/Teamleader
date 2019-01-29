@@ -1,8 +1,8 @@
 {
-	"name": "sumocoders/teamleader",
+	"name": "crashgh/teamleader",
 	"type": "library",
 	"description": "PHP Teamleader is a (wrapper)class to communicate with Teamleader (http://www.teamleader.be).",
-	"homepage": "https://github.com/sumocoders/Teamleader",
+	"homepage": "https://github.com/crashgh/Teamleader",
 	"license": "BSD",
 	"authors": [
 		{
@@ -15,8 +15,8 @@
 		"php": ">=5.3.0",
 		"ext-curl": "*"
 	},
-	"target-dir": "SumoCoders/Teamleader",
+	"target-dir": "crashgh/Teamleader",
 	"autoload": {
-		"psr-0": {"SumoCoders\\Teamleader": ""}
+		"psr-0": {"crashgh\\Teamleader": ""}
 	}
 }

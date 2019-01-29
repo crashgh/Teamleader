@@ -15,8 +15,8 @@
 		"php": ">=5.3.0",
 		"ext-curl": "*"
 	},
-	"target-dir": "crashgh/Teamleader",
+	"target-dir": "SumoCoders/Teamleader",
 	"autoload": {
-		"psr-0": {"crashgh\\Teamleader": ""}
+		"psr-0": {"SumoCoders\\Teamleader": ""}
 	}
 }

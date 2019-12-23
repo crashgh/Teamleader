@@ -20,6 +20,11 @@ class Product
     private $name;
 
     /**
+     * @var  string
+     */
+    private $description;
+
+    /**
      * @var float
      */
     private $price;
@@ -66,6 +71,22 @@ class Product
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * @param string $description
+     */
+    public function setDescripion($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
     }
 
     /**
@@ -164,13 +185,17 @@ class Product
     public static function initializeWithRawData($data)
     {
         $product = new Product();
-
         foreach ($data as $key => $value) {
             switch ($key) {
+                case 'prices' :
+                    $first = array_shift($value);
+                    $product->setPrice($first['price_excl_vat']);
                 case 'inv_account_id':
                     $product->setInvoiceAccountId($value);
                     break;
-
+                case 'description' :
+                    $product->setDescripion($value);
+                    break;
                 default:
                     // Ignore empty values
                     if ($value == '') {
@@ -202,6 +227,7 @@ class Product
     {
         $return = array(
             'name' => $this->getName(),
+            'description' => $this->getDescription(),
             'price' => $this->getPrice(),
         );
 
